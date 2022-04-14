@@ -26,7 +26,7 @@ It utilizes two popular parallel algorithms (e.g., CRT and NTT) to exploit threa
    docker run -itd --rm --name hebooster --gpus all <Image ID>
    ```
    
-5. **Enter into the `hebooster` conrainer**
+5. **Enter into the `hebooster` container**
    ```
    docker attach <container ID>
    ```
