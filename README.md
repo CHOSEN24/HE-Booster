@@ -40,13 +40,17 @@ It utilizes two popular parallel algorithms (e.g., CRT and NTT) to exploit threa
 Part 1: CRT and NTT
 
 ================================================================= CRT kernel time is 6.90483 microseconds
+
 =================================================================ICRT kernel time is 25.4956 microseconds
+
 ================================================================= NTT kernel time is 12.544 microseconds
+
 =================================================================INTT kernel time is 12.7222 microseconds
 
 Part 2: Encryption and Decryption
 
 =================================================================Enc time is 187.392 microseconds
+
 =================================================================Dec time is 148.48 microseconds
 
 Part 3: Homomorphic Addition
@@ -61,13 +65,18 @@ Part 5: Key Switching
 
 =================================================================Key Switching time is 362.291 microseconds
 
+---
+
 **2. Perform the second parameter set: `./FHE_BGV_Performance_test 16384`**
 
 Part 1: CRT and NTT
 
 ================================================================= CRT kernel time is 19.1508 microseconds
+
 =================================================================ICRT kernel time is 72.5514 microseconds
+
 ================================================================= NTT kernel time is 13.0734 microseconds
+
 =================================================================INTT kernel time is 13.2833 microseconds
 
 Part 2: Encryption and Decryption
@@ -87,18 +96,24 @@ Part 5: Key Switching
 
 =================================================================Key Switching time is 992.291 microseconds
 
+---
+
 **3. Perform the third parameter set: `./FHE_BGV_Performance_test 32768`**
 
 Part 1: CRT and NTT
 
 ================================================================= CRT kernel time is 149.537 microseconds
+
 =================================================================ICRT kernel time is 394.464 microseconds
+
 ================================================================= NTT kernel time is 17.6681 microseconds
+
 =================================================================INTT kernel time is 18.6429 microseconds
 
 Part 2: Encryption and Decryption
 
 =================================================================Enc time is 796.25 microseconds
+
 =================================================================Dec time is 333.18 microseconds
 
 Part 3: Homomorphic Addition
