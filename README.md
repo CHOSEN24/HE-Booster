@@ -9,7 +9,6 @@ It utilizes two popular parallel algorithms (e.g., CRT and NTT) to exploit threa
 
 ## Install
 1. **Download the container file**
-  Link this address ---> [hebooster.tar](https://drive.google.com/file/d/1h39QwieUE6qrg6uAJVX8N2zoAgwwllmw/view?usp=sharing)
   
 2. **Unzip the file**
    ```
