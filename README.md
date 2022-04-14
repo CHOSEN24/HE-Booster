@@ -14,7 +14,7 @@ HE-Booster is a GPU-accelerated polynomial arithmetic library for homomorphic en
    unzip hebooster.tar.zip
    ```
    
-3. **Load the container**
+3. **Import the Image**
    ```
    docker load < hebooster.tar
    ```
