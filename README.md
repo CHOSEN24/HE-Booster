@@ -6,20 +6,29 @@ HE-Booster is a GPU-accelerated polynomial arithmetic library for homomorphic en
 2. The NVIDIA CUDA Driver version 460.32.03.
 
 ## Install
-1. **Download the container file.**
+1. **Download the container file**
   Link this address ---> [hebooster.tar](https://drive.google.com/file/d/1h39QwieUE6qrg6uAJVX8N2zoAgwwllmw/view?usp=sharing)
-2. **Unzip the file.**
+  
+2. **Unzip the file**
    ```
    unzip hebooster.tar.zip
    ```
-3. **Load the container.**
+   
+3. **Load the container**
    ```
    docker load < hebooster.tar
    ```
-4. **Find `hebooster` image ID and run it.**
+   
+4. **Find `hebooster` image ID and run it**
    ```
    docker run -itd --rm --name hebooster --gpus all <Image ID>
    ```
+   
+5. **Enter into the `hebooster` conrainer**
+   ```
+   docker attach <container ID>
+   ```
 
 ## Execution
-Execute the command `./FHE_BGV_Performance_test 8192`. Other two parameters 16384 and 32768 can be used to replace 8192.
+1. Enter into folder: `cd /root/BGV_on_GPU/Schemes/BGV_NWC64`.
+2. Execute the command: `./FHE_BGV_Performance_test 8192`. Other two parameters 16384 and 32768 can be used to replace 8192.
