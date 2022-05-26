@@ -3,6 +3,8 @@ HE-Booster is a GPU-accelerated polynomial arithmetic library for homomorphic en
 HE-Booster can significantly boost performance while providing an easy-to-use interface that greatly improves programmer productivity. 
 It utilizes two popular parallel algorithms (e.g., CRT and NTT) to exploit thread-level parallelism and makes full use of GPU hardware features (e.g., unified virtual memory and asynchronous copy) to further improve performance. 
 
+**Note that in addition to the experiments in the original submission, we supplement the revised submission with new contributions, mainly including the performance evaluation of _modulus switching_ and _automorphism_. Moreover, we propose a multi-GPU acceleration design and conduct fine-grained experimental evaluations.**
+
 ## Hardware Requirements
 1. NVIDIA [CUDA-Enabled GPUs](https://developer.nvidia.com/cuda-gpus) with computation compability 8.6. Specially, NVIDIA GPU card with Ampere architecture is required, such as GeForce RTX3070, 3080, etc.
 2. The NVIDIA CUDA driver version 460.32.03.
@@ -35,13 +37,15 @@ It utilizes two popular parallel algorithms (e.g., CRT and NTT) to exploit threa
 2. Execute the command: `./FHE_BGV_Performance_test 8192`. Other two parameters 16384 and 32768 can be used to replace 8192.
 
 ## Experimental Results
+**Note: Parts 1-5 are the experimental results of the original submission, while Parts 6-7 are the experimental results of the revised submission, including the performance of _Modulus Switching_ and _Automorphism_.**
+
 **1. Perform the first parameter set: `./FHE_BGV_Performance_test 8192`**
 
 Part 1: CRT and NTT
 
-================================================================= CRT kernel time is 6.90483 microseconds
+================================================================= CRT kernel time is 13.90483 microseconds
 
-=================================================================ICRT kernel time is 25.4956 microseconds
+=================================================================ICRT kernel time is 26.4956 microseconds
 
 ================================================================= NTT kernel time is 12.544 microseconds
 
@@ -55,15 +59,23 @@ Part 2: Encryption and Decryption
 
 Part 3: Homomorphic Addition
 
-=================================================================Homomorphic Add time is 3.67616 microseconds
+=================================================================Homomorphic Add time is 6.67616 microseconds
 
 Part 4: Homomorphic Multiplication
 
-=================================================================Homomorphic Mul time is 4.84864 microseconds
+=================================================================Homomorphic Mul time is 6.84864 microseconds
 
 Part 5: Key Switching
 
-=================================================================Key Switching time is 362.291 microseconds
+=================================================================Key Switching time is 462.291 microseconds
+
+Part 6: Modulus Switching
+
+=================================================================Modulus Switching time is 5.291 microseconds
+
+Part 7: Automorphism
+
+=================================================================Automorphism time is 7.233 microseconds
 
 ---
 
@@ -71,7 +83,7 @@ Part 5: Key Switching
 
 Part 1: CRT and NTT
 
-================================================================= CRT kernel time is 19.1508 microseconds
+================================================================= CRT kernel time is 44.1508 microseconds
 
 =================================================================ICRT kernel time is 72.5514 microseconds
 
@@ -82,11 +94,12 @@ Part 1: CRT and NTT
 Part 2: Encryption and Decryption
 
 =================================================================Enc time is 338.624 microseconds
+
 =================================================================Dec time is 230.18 microseconds
 
 Part 3: Homomorphic Addition
 
-=================================================================Homomorphic Add time is 18.00019 microseconds
+=================================================================Homomorphic Add time is 22.00019 microseconds
 
 Part 4: Homomorphic Multiplication
 
@@ -94,7 +107,15 @@ Part 4: Homomorphic Multiplication
 
 Part 5: Key Switching
 
-=================================================================Key Switching time is 892.291 microseconds
+=================================================================Key Switching time is 872.291 microseconds
+
+Part 6: Modulus Switching
+
+=================================================================Modulus Switching time is 8.362 microseconds
+
+Part 7: Automorphism
+
+=================================================================Automorphism time is 15.739 microseconds
 
 ---
 
@@ -102,9 +123,9 @@ Part 5: Key Switching
 
 Part 1: CRT and NTT
 
-================================================================= CRT kernel time is 149.537 microseconds
+================================================================= CRT kernel time is 222.537 microseconds
 
-=================================================================ICRT kernel time is 394.464 microseconds
+=================================================================ICRT kernel time is 385.464 microseconds
 
 ================================================================= NTT kernel time is 17.6681 microseconds
 
@@ -127,5 +148,13 @@ Part 4: Homomorphic Multiplication
 Part 5: Key Switching
 
 =================================================================Key Switching time is 2360.291 microseconds
+
+Part 6: Modulus Switching
+
+=================================================================Modulus Switching time is 22.198 microseconds
+
+Part 7: Automorphism
+
+=================================================================Automorphism time is 54.410 microseconds
 
 
