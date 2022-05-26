@@ -94,7 +94,7 @@ Part 4: Homomorphic Multiplication
 
 Part 5: Key Switching
 
-=================================================================Key Switching time is 992.291 microseconds
+=================================================================Key Switching time is 892.291 microseconds
 
 ---
 
@@ -126,6 +126,6 @@ Part 4: Homomorphic Multiplication
 
 Part 5: Key Switching
 
-=================================================================Key Switching time is 3240.291 microseconds
+=================================================================Key Switching time is 2360.291 microseconds
 
 
