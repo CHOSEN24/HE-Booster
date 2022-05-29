@@ -3,14 +3,15 @@ HE-Booster is a GPU-accelerated polynomial arithmetic library for homomorphic en
 HE-Booster can significantly boost performance while providing an easy-to-use interface that greatly improves programmer productivity. 
 It utilizes two popular parallel algorithms (e.g., CRT and NTT) to exploit thread-level parallelism and makes full use of GPU hardware features (e.g., unified virtual memory and asynchronous copy) to further improve performance. 
 
-**Note that in addition to the experiments in the original submission, we supplement the revised submission with new contributions, mainly including the performance evaluation of _modulus switching_ and _automorphism_. Moreover, we propose a multi-GPU acceleration design and conduct fine-grained experimental evaluations.**
+**Note that in addition to the experiments in the original submission, we supplement the revised submission with new contributions, mainly including the performance evaluation of _modulus switching_ and _automorphism_. In addition, we propose a multi-GPU acceleration design and evaluate the performance boost of homomorphic multiplication (HEMUL).**
 
-## Hardware Requirements
-1. NVIDIA [CUDA-Enabled GPUs](https://developer.nvidia.com/cuda-gpus) with computation compability 8.6. Specially, NVIDIA GPU card with Ampere architecture is required, such as GeForce RTX3070, 3080, etc.
+## Software/Hardware Requirements
+1. NVIDIA [CUDA-Enabled GPUs](https://developer.nvidia.com/cuda-gpus) with computation compability 8.6. Specially, NVIDIA GPU card with Ampere architecture is required, such as GeForce RTX3070, etc.
 2. The NVIDIA CUDA driver version 460.32.03.
+3. The NVIDIA CUDA Toolkit version 11.2.
 
 ## Install
-1. **Download the container file [HE-Booster container link](https://drive.google.com/file/d/1h39QwieUE6qrg6uAJVX8N2zoAgwwllmw/view).**
+1. **Download the container file [HE-Booster link](https://drive.google.com/file/d/1h39QwieUE6qrg6uAJVX8N2zoAgwwllmw/view).**
   
 2. **Unzip the file**
    ```
@@ -33,8 +34,8 @@ It utilizes two popular parallel algorithms (e.g., CRT and NTT) to exploit threa
    ```
 
 ## Execution
-1. Enter into folder: `cd /root/BGV_on_GPU/Schemes/BGV_NWC64`.
-2. Execute the command: `./FHE_BGV_Performance_test 8192`. Other two parameters 16384 and 32768 can be used to replace 8192.
+1. Enter into folder: `cd /root/BGV_on_GPU_Revised/Schemes/BGV_NWC64`.
+2. Execute the command: `./FHE_BGV_Performance_test 8192`. Other two parameters 16384 and 32768 can be employed.
 
 ## Experimental Results
 **Note: Parts 1-5 are the experimental results of the original submission, while Parts 6-7 are the experimental results of the revised submission, including the performance of _Modulus Switching_ and _Automorphism_.**
