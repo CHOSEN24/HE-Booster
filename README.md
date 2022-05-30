@@ -40,7 +40,7 @@ It utilizes two popular parallel algorithms (e.g., CRT and NTT) to exploit threa
    ```
    
 ### For a multiple-GPU system
-1. **Download the container file [hebooster-multiGPU](https://drive.google.com/file/d/1h39QwieUE6qrg6uAJVX8N2zoAgwwllmw/view).**
+1. **Download the container file [hebooster-multiGPU](https://drive.google.com/file/d/1BP6Cm5JsjiWXYNiMBv0PRqWwQrsPfkue/view?usp=sharing).**
   
 2. **Unzip the file**
    ```
