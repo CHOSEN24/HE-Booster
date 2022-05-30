@@ -183,3 +183,178 @@ Part 7: Automorphism
 
 ### For a multiple-GPU system
 
+**1. Run the command:** `./FHE_BGV_on_MultiGPU 8192 1 1`
+
+============================ Evaluating 1 HEMUL(s) on 1 GPUs starts =============================
+
+TensorProd Elapsed time on device 0: 0.005598 ms
+
+INTT Elapsed time on device 0: 0.028517 ms
+
+ModUp Elapsed time on device 0: 0.008634 ms
+
+NTT Elapsed time on device 0: 0.028150 ms
+
+MulKsk Elapsed time on device 0: 0.011313 ms
+
+INTT Elapsed time on device 0: 0.072274 ms
+
+ModDown Elapsed time on device 0: 0.011192 ms
+
+NTT Elapsed time on device 0: 0.043671 ms
+
+Addition Elapsed time on device 0: 0.004088 ms
+
+============================ Evaluating 1 HEMUL(s) on 1 GPUs ends =============================
+
+**2. Run the command:** `./FHE_BGV_on_MultiGPU 8192 8 8`
+
+============================ Evaluating 8 HEMUL(s) on 8 GPUs starts =============================
+
+TensorProd Part Elapsed time on device 0: 0.005888 ms
+
+TensorProd Part Elapsed time on device 1: 0.005885 ms
+
+TensorProd Part Elapsed time on device 2: 0.006069 ms
+
+TensorProd Part Elapsed time on device 3: 0.006095 ms
+
+TensorProd Part Elapsed time on device 4: 0.005815 ms
+
+TensorProd Part Elapsed time on device 5: 0.005985 ms
+
+TensorProd Part Elapsed time on device 6: 0.005769 ms
+
+TensorProd Part Elapsed time on device 7: 0.005620 ms
+
+INTT Elapsed time on device 0: 0.034101 ms
+
+INTT Elapsed time on device 1: 0.033696 ms
+
+INTT Elapsed time on device 2: 0.034174 ms
+
+INTT Elapsed time on device 3: 0.034268 ms
+
+INTT Elapsed time on device 4: 0.034344 ms
+
+INTT Elapsed time on device 5: 0.033376 ms
+
+INTT Elapsed time on device 6: 0.033573 ms
+
+INTT Elapsed time on device 7: 0.034431 ms
+
+ModUP Elapsed time on device 0: 0.012641 ms
+
+ModUP Elapsed time on device 1: 0.012239 ms
+
+ModUP Elapsed time on device 2: 0.012601 ms
+
+ModUP Elapsed time on device 3: 0.012175 ms
+
+ModUP Elapsed time on device 4: 0.012759 ms
+
+ModUP Elapsed time on device 5: 0.012100 ms
+
+ModUP Elapsed time on device 6: 0.012325 ms
+
+ModUP Elapsed time on device 7: 0.012451 ms
+
+NTT Elapsed time on device 0: 0.032386 ms
+
+NTT Elapsed time on device 1: 0.032295 ms
+
+NTT Elapsed time on device 2: 0.032123 ms
+
+NTT Elapsed time on device 3: 0.032130 ms
+
+NTT Elapsed time on device 4: 0.032233 ms
+
+NTT Elapsed time on device 5: 0.031927 ms
+
+NTT Elapsed time on device 6: 0.032327 ms
+
+NTT Elapsed time on device 7: 0.032375 ms
+
+MulKsk Elapsed time on device 0: 0.011296 ms
+
+MulKsk Elapsed time on device 1: 0.011102 ms
+
+MulKsk Elapsed time on device 2: 0.011330 ms
+
+MulKsk Elapsed time on device 3: 0.010580 ms
+
+MulKsk Elapsed time on device 4: 0.010260 ms
+
+MulKsk Elapsed time on device 5: 0.011142 ms
+
+MulKsk Elapsed time on device 6: 0.010346 ms
+
+MulKsk Elapsed time on device 7: 0.010297 ms
+
+INTT Elapsed time on device 0: 0.070855 ms
+
+INTT Elapsed time on device 1: 0.070719 ms
+
+INTT Elapsed time on device 2: 0.071620 ms
+
+INTT Elapsed time on device 3: 0.070738 ms
+
+INTT Elapsed time on device 4: 0.071133 ms
+
+INTT Elapsed time on device 5: 0.070399 ms
+
+INTT Elapsed time on device 6: 0.071289 ms
+
+INTT Elapsed time on device 7: 0.071835 ms
+
+ModDown Elapsed time on device 0: 0.011375 ms
+
+ModDown Elapsed time on device 1: 0.011972 ms
+
+ModDown Elapsed time on device 2: 0.012968 ms
+
+ModDown Elapsed time on device 3: 0.013604 ms
+
+ModDown Elapsed time on device 4: 0.015893 ms
+
+ModDown Elapsed time on device 5: 0.012228 ms
+
+ModDown Elapsed time on device 6: 0.013154 ms
+
+ModDown Elapsed time on device 7: 0.012268 ms
+
+NTT Elapsed time on device 0: 0.048266 ms
+
+NTT Elapsed time on device 1: 0.043793 ms
+
+NTT Elapsed time on device 2: 0.042727 ms
+
+NTT Elapsed time on device 3: 0.043367 ms
+
+NTT Elapsed time on device 4: 0.048102 ms
+
+NTT Elapsed time on device 5: 0.043750 ms
+
+NTT Elapsed time on device 6: 0.042840 ms
+
+NTT Elapsed time on device 7: 0.043780 ms
+
+Addition Part Elapsed time on device 0: 0.006658 ms
+
+Addition Part Elapsed time on device 1: 0.006313 ms
+
+Addition Part Elapsed time on device 2: 0.006621 ms
+
+Addition Part Elapsed time on device 3: 0.007472 ms
+
+Addition Part Elapsed time on device 4: 0.006864 ms
+
+Addition Part Elapsed time on device 5: 0.006818 ms
+
+Addition Part Elapsed time on device 6: 0.006814 ms
+
+Addition Part Elapsed time on device 7: 0.006593 ms
+
+============================ Evaluating 8 HEMUL(s) on 8 GPUs ends =============================
+
+
