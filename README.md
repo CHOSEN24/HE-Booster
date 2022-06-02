@@ -1,19 +1,22 @@
 # HE-Booster: An Efficient Polynomial Arithmetic Acceleration on GPUs for Homomorphic Encryption
-HE-Booster is a GPU-accelerated polynomial arithmetic library for homomorphic encryption. 
-HE-Booster can significantly boost performance while providing an easy-to-use interface that greatly improves programmer productivity. 
-It utilizes two popular parallel algorithms (e.g., CRT and NTT) to exploit thread-level parallelism and makes full use of GPU hardware features (e.g., unified virtual memory and asynchronous copy) to further improve performance. 
+HE-Booster is an efficient GPU-based HE acceleration design.
+For single-GPU acceleration, a novel systematic acceleration is exploited to map five common phases in typical HE schemes to the GPU architecture. Specially, a novel inter-thread local synchronization is proposed to exploit **_thread-level parallellism_** during NTT and INTT phases. 
+For Multiple-GPU acceleration, we design a scalable parallelization by exploiting fine-grain **_data-level parallelism_**.
+<!-- HE-Booster can significantly boost performance while providing an easy-to-use interface that greatly improves programmer productivity. 
+It utilizes two popular parallel algorithms (e.g., CRT and NTT) to exploit thread-level parallelism and makes full use of GPU hardware features (e.g., unified virtual memory and asynchronous copy) to further improve performance.  -->
 
-**Note that in addition to the experiments in the original submission, we added new experiments in the revised submission, mainly including the performance evaluation of _modulus switching_ and _automorphism_. Besides, we propose a multi-GPU acceleration design and evaluate the performance of homomorphic multiplication (HEMUL).**
+**Note that in addition to the experiments in the original submission, we add new experiments in the revised submission, mainly including the performance evaluation of _modulus switching_ and _automorphism_. 
+Besides, we propose a multi-GPU acceleration design and evaluate the performance of homomorphic multiplication (HEMUL) under different number of GPUs.**
 
 ## Software/Hardware Requirements
 ### For a single-GPU system
-1. NVIDIA [CUDA-Enabled GPUs](https://developer.nvidia.com/cuda-gpus) with computation compability 8.6. Specially, NVIDIA GPU card with Ampere architecture is required, such as GeForce RTX3070.
+1. NVIDIA [CUDA-Enabled GPUs](https://developer.nvidia.com/cuda-gpus) with computation compability 8.6. Specially, NVIDIA GPU card with Ampere architecture is required, such as GeForce RTX3070 used in this paper.
 2. The NVIDIA CUDA driver version is 460.32.03.
 3. The NVIDIA CUDA Toolkit version is 11.2.
 4. The docker version is 20.10.16.
 ### For a multiple-GPU system
-1. Eight NVIDIA Tesla V100 cards are reqiures for our multi-GPU design.
-2. The CUDA driver, toolkit and docker version are the same as the single GPU.
+1. Eight NVIDIA Tesla V100 cards are reqiured for our multi-GPU design.
+2. The CUDA driver, toolkit and docker version are the same as the single-GPU implementation.
 
 ## Install
 ### For a single-GPU system
@@ -65,10 +68,10 @@ It utilizes two popular parallel algorithms (e.g., CRT and NTT) to exploit threa
 ## Execution
 ### For a single-GPU system
 1. Enter into folder: `cd /root/BGV_on_GPU_Revised/Schemes/BGV_NWC64`.
-2. Execute the command: `./FHE_BGV_Performance_test N`, where _N_ is the polynomial degree. Three parameters, such as 8192, 16384, and 32768 can be employed.
+2. Execute the command: `./FHE_BGV_Performance_test N`, where _N_ is the polynomial degree. Three degrees, such as 8192, 16384, and 32768 can be employed.
 ### For a multiple-GPU system
 1. Enter into folder: `cd /root/BGV_on_multiGPU/Schemes/BGV_NWC64`.
-2. Execute the command: `./FHE_BGV_Performance_test N gpu_nums hemul_nums`, where _N_ is the polynomial degree, _gpu_nums_ is the number of GPUs and _hemul_nums_ is the number of homomorphic multiplication to be evaluated. Here _N_ is fixed to 8192. The parameters _gpu_nums_ and _hemul_nums_ can be set to 1, 2, 4, and 8 respectively.
+2. Execute the command: `./FHE_BGV_Performance_test N gpu_nums hemul_nums`, where _N_ is the polynomial degree, _gpu_nums_ is the number of GPUs and _hemul_nums_ is the number of HEMUL to be evaluated. Here _N_ is fixed to 8192. The parameters _gpu_nums_ and _hemul_nums_ can be set to 1, 2, 4, and 8 respectively.
 
 ## Experimental Results
 ### For a single-GPU system
@@ -182,6 +185,8 @@ Part 7: Automorphism
 =================================================================Automorphism time is 54.410 microseconds
 
 ### For a multiple-GPU system
+
+**Here we provide the following two typical commands to evaluate the acceleration performance of multi-GPU designs that can reflect the central results of this paper.**
 
 **1. Run the command:** `./FHE_BGV_on_MultiGPU 8192 1 1`
 
