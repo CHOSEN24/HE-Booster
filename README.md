@@ -20,7 +20,7 @@ Besides, we propose a multi-GPU acceleration design and evaluate the performance
 
 ## Install
 ### For a single-GPU system
-1. **Download the container file [hebooster-revised](https://drive.google.com/file/d/1btdP8_hFROXgUCfiRuTMAuDcNcMO-c7B/view?usp=sharing).**
+1. **Download the container file [hebooster-revised].**
   
 2. **Unzip the file**
    ```
@@ -43,7 +43,7 @@ Besides, we propose a multi-GPU acceleration design and evaluate the performance
    ```
    
 ### For a multiple-GPU system
-1. **Download the container file [hebooster-multiGPU](https://drive.google.com/file/d/1BP6Cm5JsjiWXYNiMBv0PRqWwQrsPfkue/view?usp=sharing).**
+1. **Download the container file [hebooster-multiGPU].**
   
 2. **Unzip the file**
    ```
